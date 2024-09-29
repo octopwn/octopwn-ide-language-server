@@ -1,0 +1,4 @@
+pip install mypy     #!!!! be careful, not "mypi".
+
+stubgen -p octopwn --include-docstrings
+pylsp --ws --port 8081

@@ -1,0 +1,13 @@
+from _typeshed import Incomplete
+
+class NTLMSSP_MESSAGE_SIGNATURE_NOEXT:
+    Version: int
+    RandomPad: Incomplete
+    Checksum: Incomplete
+    SeqNum: Incomplete
+    def __init__(self) -> None: ...
+    def to_bytes(self): ...
+    @staticmethod
+    def from_bytes(bbuff): ...
+    @staticmethod
+    def from_buffer(buff): ...

@@ -1,0 +1,15 @@
+mypy
+python-language-server[all]
+pylint
+
+cryptography
+unicrypto
+asysocks
+minikerberos
+winacl
+msldap
+aiosmb
+aardwolf
+pypykatz
+wsnet
+
