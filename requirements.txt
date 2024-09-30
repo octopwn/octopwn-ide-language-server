@@ -1,5 +1,5 @@
 mypy
-python-language-server[all]
+python-lsp-server[all]
 pylint
 
 cryptography
