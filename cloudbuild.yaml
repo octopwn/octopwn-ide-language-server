@@ -1,0 +1,31 @@
+steps:
+  # Step 1: Build the Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - build
+      - '-t'
+      - 'europe-west1-docker.pkg.dev/octopwn-ea2a4/public/octopwn-ide-language-server:$SHORT_SHA'  # Tag image with commit SHA
+      - '.'
+
+  # Step 2: Tag the image as 'latest'
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - tag
+      - 'europe-west1-docker.pkg.dev/octopwn-ea2a4/public/octopwn-ide-language-server:$SHORT_SHA'
+      - 'europe-west1-docker.pkg.dev/octopwn-ea2a4/public/octopwn-ide-language-server:latest'  # Tag the same image with 'latest'
+
+  # Step 3: Push both tags to the registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - push
+      - 'europe-west1-docker.pkg.dev/octopwn-ea2a4/public/octopwn-ide-language-server:$SHORT_SHA'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - push
+      - 'europe-west1-docker.pkg.dev/octopwn-ea2a4/public/octopwn-ide-language-server:latest'
+
+# Images to push after build
+images:
+  - 'europe-west1-docker.pkg.dev/octopwn-ea2a4/public/octopwn-ide-language-server:$SHORT_SHA'
+  - 'europe-west1-docker.pkg.dev/octopwn-ea2a4/public/octopwn-ide-language-server:latest'
