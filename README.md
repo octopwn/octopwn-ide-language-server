@@ -6,7 +6,7 @@ This project constains the latest stubs for octopwn and its plugins, allowing th
 The users have two (supported) way of deploying this tool.  
 
 ## Deploy via docker (preferred)
-We provide a public docker image [here](europe-west1-docker.pkg.dev/octopwn-ea2a4/public/octopwn-ide-language-server) that has everything set up. After installing docker, just run the following command:  
+We provide a public docker image that has everything set up. After installing docker, just run the following command:  
 `docker run -p 8082:8082 europe-west1-docker.pkg.dev/octopwn-ea2a4/public/octopwn-ide-language-server:latest`
 
 ## Deploy in a venv
