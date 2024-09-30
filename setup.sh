@@ -14,4 +14,4 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # Run the application
-strace -f -t -e trace=file pylsp --ws --port 8082
+pylsp --ws --port 8082

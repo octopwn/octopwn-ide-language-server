@@ -1,0 +1,9 @@
+from _typeshed import Incomplete
+from octopwn.remote.client.clients.base import ClientConsoleBaseRemote as ClientConsoleBaseRemote
+from octopwn.remote.protocol.python import ldap_pb2 as ldap_pb2, messages_pb2 as messages_pb2
+
+class LDAPClientConsoleRemote(ClientConsoleBaseRemote):
+    adinfo: Incomplete
+    def __init__(self, octopwnobj, clientid, commands=[]) -> None: ...
+    async def process_message_internal(self, cmd) -> None: ...
+    async def listDirectory(self, path: str): ...

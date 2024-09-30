@@ -1,0 +1,13 @@
+import asyncio
+from _typeshed import Incomplete
+from octopwn.remote.protocol.python import messages_pb2 as messages_pb2
+
+class UserAuthError(Exception):
+    raddr: Incomplete
+    def __init__(self, raddr, msg) -> None: ...
+
+class AuthHandler:
+    authmethods: Incomplete
+    def __init__(self, authmethods) -> None: ...
+    def get_supported_types(self) -> list[str]: ...
+    def authenticate(self, msg: messages_pb2.RegisterClient, connection: asyncio.StreamWriter) -> tuple[str, bool, Exception]: ...

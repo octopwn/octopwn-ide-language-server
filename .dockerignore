@@ -1,0 +1,7 @@
+# Ignore Python cache and venv directory
+__pycache__/
+venv/
+
+# Ignore any Git-related files
+.git/
+.gitignore
