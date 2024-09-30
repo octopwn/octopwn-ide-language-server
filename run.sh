@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Activate the virtual environment
-source venv/bin/activate
+source ./venv/bin/activate
 
 # Run the application
-pylsp --ws --port 8082
+./venv/bin/pylsp --ws --port 8082
