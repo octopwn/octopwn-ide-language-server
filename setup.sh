@@ -12,6 +12,4 @@ source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
-
-# Run the application
-pylsp --ws --port 8082
+deactivate

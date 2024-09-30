@@ -18,4 +18,4 @@ RUN . venv/bin/activate && pip install --upgrade pip && pip install -r requireme
 EXPOSE 8082
 
 # Command to run the application with strace
-CMD ["pylsp", "--ws", "--port", "8082"]
+CMD ["./run.sh"]
